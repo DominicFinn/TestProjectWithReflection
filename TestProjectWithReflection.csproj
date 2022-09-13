@@ -9,21 +9,30 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scenarios\Posts\WhenReadingEvents\Events\1_EventCreated.json" />
+    <None Remove="Scenarios\Posts\WhenReadingEvents\Events\2_EventUpdated.json" />
+    <None Remove="Scenarios\Posts\WhenReadingEvents\Events\3_EventDeleted.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Scenarios\Posts\WhenReadingEvents\Events\1_EventCreated.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scenarios\Posts\WhenReadingEvents\Events\2_EventUpdated.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scenarios\Posts\WhenReadingEvents\Events\3_EventDeleted.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NUnit" Version="3.13.3" />
     <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <PackageReference Include="NUnit.Analyzers" Version="3.3.0" />
     <PackageReference Include="coverlet.collector" Version="3.1.2" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="TestFiles\TestFixtures\IfThereAreDogs.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="TestFiles\TestFixtures\IfThereAreNoDogs.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>
