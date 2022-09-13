@@ -15,7 +15,6 @@
 			if (instance == null)
 				return;
 
-			var type = instance.GetType();
 			var nameSpace = instance.GetType().Namespace;
 
 			if (nameSpace != null)
